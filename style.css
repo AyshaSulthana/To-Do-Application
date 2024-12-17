@@ -1,0 +1,172 @@
+body {
+    font-family: Arial, sans-serif;
+    background: rgb(168 88 132);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.todo-container {
+    background: rgb(224 176 203);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #582a52;
+    font-weight: bold;
+
+}
+
+
+input{
+    background: rgb(197 138 171);
+    color: #2a2323;
+}
+
+.input-section {
+    display: flex;
+    margin-bottom: 20px;
+    
+}
+
+#taskInput {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#addTaskBtn {
+    padding: 10px 20px;
+    background-color: rgb(168 88 132);
+    color: #2a2323;
+    border: none;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#addTaskBtn:hover {
+    background-color: rgb(134, 64, 103);
+}
+
+#taskList {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task-item {
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    background-color: rgb(197 138 171);
+    color: #2a2323;
+}
+
+.task-item .completed {
+    text-decoration: line-through;
+
+    
+}
+.disabled{
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+
+.task-item .actions {
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    right: 15px;
+}
+
+
+@media (max-width: 768px) {
+    .todo-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    #addTaskBtn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    #taskInput {
+        font-size: 14px;
+    }
+
+    .task-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .task-item .actions {
+        margin-top: 10px;
+    }
+}
+
+
+#prioritySelect{
+    background-color: rgb(168 88 132);
+    margin-left: 8px;
+    width: 56px;
+    height: 40px;
+    color: #2a2323;
+
+}
+
+
+
+.task-item .edit-btn, .task-item .delete-btn {
+    background-color: rgb(168 88 132);
+    color: #453a3a;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: medium;
+}
+
+.task-item .delete-btn {
+    
+    
+}
+
+.task-item .edit-btn:hover {
+    background-color: rgb(134, 64, 103);
+}
+
+.task-item .delete-btn:hover {
+    background-color: rgb(134, 64, 103);
+}
+.prioritySelectSpan{
+    background-color: rgb(173 105 143);
+width: 70px;
+height: 30px;
+border-radius: 3px;
+padding-top: 4px;
+position: absolute;
+right: 150px;
+
+
+}
+.todotask{
+    margin-left: 10px;
+    width: 170px;
+}
